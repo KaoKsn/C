@@ -21,19 +21,3 @@ Clone the repository to your local system:
 
 ```bash  
 git clone https://github.com/KaoKsn/C.git 
-
---- 
-
-## Compiling the programs:
-
-```bash
-gcc filename.c -o nameoftheoutputfile
-
-## Run the compiled program using:
-```bash
-./nameoftheoutputfile
-
----
-
-## NOTE: 
-All the files listed in the repo are kept to show that you learn everything as a beginner and eventually you become better.
