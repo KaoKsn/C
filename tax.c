@@ -11,7 +11,8 @@
     
     There is no tax upto 12.75 lack Rupees 
    ** Ignore any other complexities.
-    */
+*/
+
 #include<stdio.h>
 
 int main(void)
@@ -22,6 +23,8 @@ int main(void)
     scanf("%f",&income);
     
     /* Calculating the income tax for the entered income */
+
+	/* Method 1 (less efficient)
     if(income<=1275000)
 	{
         printf("You need not pay any tax");
@@ -29,6 +32,7 @@ int main(void)
 	}
     else
     {
+		// A standard of 60000 Rs. shall be payed by you anyways because you come under the "can be taxed" category (i.e income>12.75lpa) 
         tax = 60000;
         if(income<=1600000)
         {
@@ -59,6 +63,36 @@ int main(void)
         
         tax += 0.30*(income-2400000);
     }
+    */
+
+	/* A more efficient way to calculate the tax for any given income would be... */
+	
+	if(income<=1275000)
+	{
+		printf("You need not pay any tax\n");
+		return 0;
+	}
+	else
+	{
+		tax=60000;
+		if(income>=1200000 && income<=1600000)
+		{
+			tax += 0.15*(income-1200000);
+		}
+		else if(income>=1600000 && income<=2000000)
+		{
+			tax += 0.15*(400000) + 0.20*(income-1600000);
+		}
+		else if(income>=2000000 && income<=2400000)
+		{
+			tax += 0.15*400000 + 0.20*400000 + 0.25*(income-2000000);
+		}
+		else
+			tax +=  0.15*400000 + 0.20*400000 + 0.25*400000 + 0.30*(income-2400000);	
+	}
+	
+	/* Printing the Income and the subsequent taxes the user has to pay */
 	printf("Income: Rs. %.3f\nTax: Rs. %.3f\n",income,tax);
+
     return 0;
 }
