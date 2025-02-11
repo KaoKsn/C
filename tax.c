@@ -33,6 +33,7 @@ int main(void)
         if(income<=1600000)
         {
             tax += 0.15*(income-1200000);
+			printf("Income: Rs. %.3f\nTax: Rs. %.3f\n",income,tax);
             return 0;
         }
         else
@@ -41,6 +42,7 @@ int main(void)
         if(income<=2000000)
         {
             tax += 0.20*(income-1600000);
+			printf("Income: Rs. %.3f\nTax: Rs. %.3f\n",income,tax);
             return 0;
         }
         else
@@ -49,6 +51,7 @@ int main(void)
         if(income<=2400000)
         {
             tax += 0.25*(income-2000000);
+			printf("Income: Rs. %.3f\nTax: Rs. %.3f\n",income,tax);
             return 0;
         }
         else
