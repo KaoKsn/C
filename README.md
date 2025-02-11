@@ -20,4 +20,20 @@ This repository contains a collection of C programs written while learning and e
 Clone the repository to your local system:  
 
 ```bash  
-git clone https://github.com/KaoKsn/C.git 
+git clone https://github.com/KaoKsn/C.git
+```
+--- 
+## Compile and run the desired C program using:
+
+### Compiling...
+```bash
+gcc filename.c -o filename
+```
+### Running
+```bash
+./filename
+```
+---
+
+## Note: 
+All these programs were written as a beginner to programming.
