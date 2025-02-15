@@ -5,7 +5,7 @@
 void arrayReverser(int *ptr,int n)
 {
 	int temp;
-	for(int i=0;i<n/2;i++)
+	for(int i=0;i<n/2;i++)          /* Going for i<=n/2 is not required and computes extra unwanted interations */
 	{
 		int temp = ptr[i];
 		ptr[i] = ptr[n-i-1]; // ptr[n] doesn't exist
