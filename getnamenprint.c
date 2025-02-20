@@ -18,4 +18,10 @@ int main(void)
 	for(i=0;i<q;i++)
 		printf("%c",name[i]);
 	printf("\n");
+
+	/* A better version of this could be */
+	printf("\nEnter your name again: ");
+	fgets(name,30,stdin);
+	
+	printf("Hello, %s\n",name);
 }
